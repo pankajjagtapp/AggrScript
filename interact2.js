@@ -55,6 +55,8 @@ const TOKEN_2500000_AMOUNT = ethers.utils.parseEther("2500000");
 const TOKEN_1000000_AMOUNT = ethers.utils.parseEther("1000000");
 const TOKEN_1500000_AMOUNT = ethers.utils.parseEther("1500000");
 const TOKEN_2000000_AMOUNT = ethers.utils.parseEther("2000000");
+const TOKEN_3000000_AMOUNT = ethers.utils.parseEther("3000000");
+const TOKEN_4000000_AMOUNT = ethers.utils.parseEther("4000000");
 
 const TOKEN_980000_AMOUNT = ethers.utils.parseEther("980000");
 const TOKEN_1010000_AMOUNT = ethers.utils.parseEther("1010000");
@@ -88,9 +90,9 @@ async function main(){
 
 // console.log("Tokens Minted");
 
-await tokenA.connect(wallet).approve(tuniswapContract.address, TOKEN_2500000_AMOUNT);
-await tokenB.connect(wallet).approve(tuniswapContract.address,TOKEN_1000000_AMOUNT);
-await tuniswapContract.connect(wallet).addLiquidity(tokenAAddress,tokenBAddress, TOKEN_2500000_AMOUNT,TOKEN_1000000_AMOUNT,1,1,wallet.address,1964541741);
+await tokenA.connect(wallet).approve(tuniswapContract.address, TOKEN_4000000_AMOUNT);
+await tokenB.connect(wallet).approve(tuniswapContract.address,TOKEN_3000000_AMOUNT);
+await tuniswapContract.connect(wallet).addLiquidity(tokenAAddress,tokenBAddress, TOKEN_4000000_AMOUNT,TOKEN_3000000_AMOUNT,1,1,wallet.address,1964541741);
 console.log("Liquidity Added 1");
 
 await tokenA.connect(wallet).approve(tuniswapContract.address,TOKEN_1000000_AMOUNT);
